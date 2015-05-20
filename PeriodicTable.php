@@ -18,8 +18,6 @@
  * obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-$url;
-$num;
 $search = ['%nameupper%', '%namelower%', '%symbolupper%', '%symbollower%', '%number%', '%0number%' ];
 
 /* Elements */
@@ -65,11 +63,11 @@ function generate_table_func( $atts ) {
 		'url' => 'http://renkin42.net/project-updates/other/elements/%0number%-%namelower%/',
 		'num' => 118
 	), $atts);
-	$GLOBALS['url'] = $a['url'];
-	$GLOBALS['num'] = $a['num'];
+	$url = $a['url'];
+	$num = $a['num'];
 	$table = '<table class="periodic-table">
 		<tr>
-		<td class="element nonmetal">'.get_element_link('H', 1).'</td>
+		<td class="element nonmetal">'.get_element_link('H', 1, $url, $num).'</td>
 		<td></td>
 		<td></td>
 		<td></td>
@@ -86,11 +84,11 @@ function generate_table_func( $atts ) {
 		<td></td>
 		<td></td>
 		<td></td>
-		<td class="element noble-gas">'.get_element_link('He', 2).'</td>
+		<td class="element noble-gas">'.get_element_link('He', 2, $url, $num).'</td>
 		</tr>
 		<tr>
-		<td class="element alkali-metal">'.get_element_link('Li', 3).'</td>
-		<td class="element alkaline-metal">'.get_element_link('Be', 4).'</td>
+		<td class="element alkali-metal">'.get_element_link('Li', 3, $url, $num).'</td>
+		<td class="element alkaline-metal">'.get_element_link('Be', 4, $url, $num).'</td>
 		<td></td>
 		<td></td>
 		<td></td>
@@ -101,16 +99,16 @@ function generate_table_func( $atts ) {
 		<td></td>
 		<td></td>
 		<td></td>
-		<td class="element metalloid">'.get_element_link('B', 5).'</td>
-		<td class="element nonmetal">'.get_element_link('C', 6).'</td>
-		<td class="element nonmetal">'.get_element_link('N', 7).'</td>
-		<td class="element nonmetal">'.get_element_link('O', 8).'</td>
-		<td class="element halogen">'.get_element_link('F', 9).'</td>
-		<td class="element noble-gas">'.get_element_link('Ne', 10).'</td>
+		<td class="element metalloid">'.get_element_link('B', 5, $url, $num).'</td>
+		<td class="element nonmetal">'.get_element_link('C', 6, $url, $num).'</td>
+		<td class="element nonmetal">'.get_element_link('N', 7, $url, $num).'</td>
+		<td class="element nonmetal">'.get_element_link('O', 8, $url, $num).'</td>
+		<td class="element halogen">'.get_element_link('F', 9, $url, $num).'</td>
+		<td class="element noble-gas">'.get_element_link('Ne', 10, $url, $num).'</td>
 		</tr>
 		<tr>
-		<td class="element alkali-metal">'.get_element_link('Na', 11).'</td>
-		<td class="element alkaline-metal">'.get_element_link('Mg', 12).'</td>
+		<td class="element alkali-metal">'.get_element_link('Na', 11, $url, $num).'</td>
+		<td class="element alkaline-metal">'.get_element_link('Mg', 12, $url, $num).'</td>
 		<td></td>
 		<td></td>
 		<td></td>
@@ -121,32 +119,32 @@ function generate_table_func( $atts ) {
 		<td></td>
 		<td></td>
 		<td></td>
-		<td class="element metal">'.get_element_link('Al', 13).'</td>
-		<td class="element metalloid">'.get_element_link('Si', 14).'</td>
-		<td class="element nonmetal">'.get_element_link('P', 15).'</td>
-		<td class="element nonmetal">'.get_element_link('S', 16).'</td>
-		<td class="element halogen">'.get_element_link('Cl', 17).'</td>
-		<td class="element noble-gas">'.get_element_link('Ar', 18).'</td>
+		<td class="element metal">'.get_element_link('Al', 13, $url, $num).'</td>
+		<td class="element metalloid">'.get_element_link('Si', 14, $url, $num).'</td>
+		<td class="element nonmetal">'.get_element_link('P', 15, $url, $num).'</td>
+		<td class="element nonmetal">'.get_element_link('S', 16, $url, $num).'</td>
+		<td class="element halogen">'.get_element_link('Cl', 17, $url, $num).'</td>
+		<td class="element noble-gas">'.get_element_link('Ar', 18, $url, $num).'</td>
 		</tr>
 		<tr>
-		<td class="element alkali-metal">'.get_element_link('K', 19).'</td>
-		<td class="element alkaline-metal">'.get_element_link('Ca', 20).'</td>
-		<td class="element transition-metal">'.get_element_link('Sc', 21).'</td>
-		<td class="element transition-metal">'.get_element_link('Ti', 22).'</td>
-		<td class="element transition-metal">'.get_element_link('V', 23).'</td>
-		<td class="element transition-metal">'.get_element_link('Cr', 24).'</td>
-		<td class="element transition-metal">'.get_element_link('Mn', 25).'</td>
-		<td class="element transition-metal">'.get_element_link('Fe', 26).'</td>
-		<td class="element transition-metal">'.get_element_link('Co', 27).'</td>
-		<td class="element transition-metal">'.get_element_link('Ni', 28).'</td>
-		<td class="element transition-metal">'.get_element_link('Cu', 29).'</td>
-		<td class="element transition-metal">'.get_element_link('Zn', 30).'</td>
-		<td class="element metal">'.get_element_link('Ga', 31).'</td>
-		<td class="element metalloid">'.get_element_link('Ge', 32).'</td>
-		<td class="element metalloid">'.get_element_link('As', 33).'</td>
-		<td class="element nonmetal">'.get_element_link('Se', 34).'</td>
-		<td class="element halogen">'.get_element_link('Br', 35).'</td>
-		<td class="element noble-gas">'.get_element_link('Kr', 36).'</td>
+		<td class="element alkali-metal">'.get_element_link('K', 19, $url, $num).'</td>
+		<td class="element alkaline-metal">'.get_element_link('Ca', 20, $url, $num).'</td>
+		<td class="element transition-metal">'.get_element_link('Sc', 21, $url, $num).'</td>
+		<td class="element transition-metal">'.get_element_link('Ti', 22, $url, $num).'</td>
+		<td class="element transition-metal">'.get_element_link('V', 23, $url, $num).'</td>
+		<td class="element transition-metal">'.get_element_link('Cr', 24, $url, $num).'</td>
+		<td class="element transition-metal">'.get_element_link('Mn', 25, $url, $num).'</td>
+		<td class="element transition-metal">'.get_element_link('Fe', 26, $url, $num).'</td>
+		<td class="element transition-metal">'.get_element_link('Co', 27, $url, $num).'</td>
+		<td class="element transition-metal">'.get_element_link('Ni', 28, $url, $num).'</td>
+		<td class="element transition-metal">'.get_element_link('Cu', 29, $url, $num).'</td>
+		<td class="element transition-metal">'.get_element_link('Zn', 30, $url, $num).'</td>
+		<td class="element metal">'.get_element_link('Ga', 31, $url, $num).'</td>
+		<td class="element metalloid">'.get_element_link('Ge', 32, $url, $num).'</td>
+		<td class="element metalloid">'.get_element_link('As', 33, $url, $num).'</td>
+		<td class="element nonmetal">'.get_element_link('Se', 34, $url, $num).'</td>
+		<td class="element halogen">'.get_element_link('Br', 35, $url, $num).'</td>
+		<td class="element noble-gas">'.get_element_link('Kr', 36, $url, $num).'</td>
 		</tr>
 		<tr>
 		<td class="element alkali-metal">Rb</td>
@@ -272,9 +270,9 @@ function generate_table_func( $atts ) {
 	return $table;
 }
 
-function get_element_link($element, $atomic_num) {
-	if($GLOBALS['num'] >= $atomic_num) {
-		$link = str_replace( $GLOBALS['search'], $GLOBALS[$element], $GLOBALS['url'] );
+function get_element_link($element, $atomic_num, $url, $num) {
+	if($num >= $atomic_num) {
+		$link = str_replace( $GLOBALS['search'], $GLOBALS[$element], $url );
 		return '<a href="'.$link.'">'.$element.'</a>';
 	} else {
 		return $element;
