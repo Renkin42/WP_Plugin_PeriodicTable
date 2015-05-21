@@ -77,6 +77,7 @@ $I = array('Iodine', 'iodine', 'I', 'i', 53, '053', 'halogen');
 $Xe = array('Xenon', 'xenon', 'Xe', 'xe', 54, '054', 'noble-gas');
 
 function generate_table_func( $atts ) {
+	wp_enqueue_script('resize-text');
 	$a = shortcode_atts(array(
 		'url' => 'http://renkin42.net/project-updates/other/elements/%0number%-%namelower%/',
 		'num' => 118
@@ -298,4 +299,7 @@ function get_element_table_slot($element, $url, $num) {
 	}
 }
 
+wp_enqueue_style('periodic-table', plugins_url('style.css', __FILE__));
+wp_enqueue_script('jquery');
+wp_register_script('resize-text', plugins_url('resizetext.js', __FILE__), array('jquery'));
 add_shortcode( 'periodic_table', 'generate_table_func' );

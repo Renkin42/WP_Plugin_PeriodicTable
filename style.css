@@ -1,0 +1,18 @@
+/* 
+    Created on : May 20, 2015, 9:03:22 PM
+    Author     : Austin Leydecker
+*/
+
+.periodic-table {
+    table-layout: auto;
+    border-collapse: collapse;
+}
+.periodic-table td {
+    border: none;
+    padding: .35vw;
+}
+
+.periodic-table td.element {
+    border: 1px solid black;
+}
+
