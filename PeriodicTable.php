@@ -18,45 +18,63 @@
  * obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-$search = ['%nameupper%', '%namelower%', '%symbolupper%', '%symbollower%', '%number%', '%0number%' ];
+$search = array('%nameupper%', '%namelower%', '%symbolupper%', '%symbollower%', '%number%', '%0number%' , '%group%');
 
 /* Elements */
-$H = array('Hydrogen', 'hydrogen', 'H', 'h', '1', '001' );
-$He = array('Helium', 'helium', 'He', 'he', '2', '002' );
-$Li = array('Lithium', 'lithium', 'Li', 'li', '3', '003' );
-$Be = array('Beryllium', 'beryllium', 'Be', 'be', '4', '004' );
-$B = array('Boron', 'boron', 'B', 'b', '5', '005' );
-$C = array('Carbon', 'carbon', 'C', 'c', '6', '006' );
-$N = array('Nitrogen', 'nitrogen', 'N', 'n', '7', '007' );
-$O = array('Oxygen', 'oxygen', 'O', 'o', '8', '008' );
-$F = array('Fluorine', 'fluorine', 'F', 'f', '9', '009' );
-$Ne = array('Neon', 'neon', 'Ne', 'ne', '10', '010' );
-$Na = array('Sodium', 'sodium', 'Na', 'na', '11', '011' );
-$Mg = array('Magnesium', 'magnesium', 'Mg', 'mg', '12', '012' );
-$Al = array('Aluminum', 'aluminum', 'Al', 'al', '13', '013' );
-$Si = array('Silicon', 'silicon', 'Si', 'si', '14', '014' );
-$P = array('Phosphorus', 'phosphorus', 'P', 'p', '15', '015' );
-$S = array('Sulfur', 'sulfur', 'S', 's', '16', '016' );
-$Cl = array('Chlorine', 'chlorine', 'Cl', 'cl', '17', '017' );
-$Ar = array('Argon', 'argon', 'Ar', 'ar', '18', '018' );
-$K = array('Potassium', 'potassium', 'K', 'k', '19', '019' );
-$Ca = array('Calcium', 'calcium', 'Ca', 'ca', '20', '020' );
-$Sc = array('Scandium', 'scandium', 'Sc', 'sc', '21', '021' );
-$Ti = array('Titanium', 'titanium', 'Ti', 'ti', '22', '022' );
-$V = array('Vanadium', 'vanadium', 'V', 'v', '23', '023' );
-$Cr = array('Chromium', 'chromium', 'Cr', 'cr', '24', '024' );
-$Mn = array('Manganese', 'manganese', 'Mn', 'mn', '25', '025' );
-$Fe = array('Iron', 'iron', 'Fe', 'fe', '26', '026' );
-$Co = array('Cobalt', 'cobalt', 'Co', 'co', '27', '027' );
-$Ni = array('Nickel', 'nickel', 'Ni', 'ni', '28', '028' );
-$Cu = array('Copper', 'copper', 'Cu', 'cu', '29', '029' );
-$Zn = array('Zinc', 'zinc', 'Zn', 'zn', '30', '030' );
-$Ga = array('Gallium', 'gallium', 'Ga', 'ga', '31', '031' );
-$Ge = array('Germanium', 'germanium', 'Ge', 'ge', '32', '032' );
-$As = array('Arsenic', 'arsenic', 'As', 'as', '33', '033' );
-$Se = array('Selenium', 'selenium', 'Se', 'se', '34', '034' );
-$Br = array('Bromine', 'bromine', 'Br', 'br', '35', '035' );
-$Kr = array('Krypton', 'krypton', 'Kr', 'kr', '36', '036' );
+$H = array('Hydrogen', 'hydrogen', 'H', 'h', 1, '001', 'nonmetal');
+$He = array('Helium', 'helium', 'He', 'he', 2, '002', 'noble-gas');
+$Li = array('Lithium', 'lithium', 'Li', 'li', 3, '003', 'alkali-metal');
+$Be = array('Beryllium', 'beryllium', 'Be', 'be', 4, '004', 'alkaline-metal');
+$B = array('Boron', 'boron', 'B', 'b', 5, '005', 'metalloid');
+$C = array('Carbon', 'carbon', 'C', 'c', 6, '006', 'nonmetal');
+$N = array('Nitrogen', 'nitrogen', 'N', 'n', 7, '007', 'nonmetal');
+$O = array('Oxygen', 'oxygen', 'O', 'o', 8, '008', 'nonmetal');
+$F = array('Fluorine', 'fluorine', 'F', 'f', 9, '009', 'halogen');
+$Ne = array('Neon', 'neon', 'Ne', 'ne', 10, '010', 'noble-gas');
+$Na = array('Sodium', 'sodium', 'Na', 'na', 11, '011', 'alkali-metal');
+$Mg = array('Magnesium', 'magnesium', 'Mg', 'mg', 12, '012', 'alkaline-metal');
+$Al = array('Aluminum', 'aluminum', 'Al', 'al', 13, '013', 'metal');
+$Si = array('Silicon', 'silicon', 'Si', 'si', 14, '014', 'metalloid');
+$P = array('Phosphorus', 'phosphorus', 'P', 'p', 15, '015', 'nonmetal');
+$S = array('Sulfur', 'sulfur', 'S', 's', 16, '016', 'nonmetal');
+$Cl = array('Chlorine', 'chlorine', 'Cl', 'cl', 17, '017', 'halogen');
+$Ar = array('Argon', 'argon', 'Ar', 'ar', 18, '018', 'noble-gas');
+$K = array('Potassium', 'potassium', 'K', 'k', 19, '019', 'alkali-metal');
+$Ca = array('Calcium', 'calcium', 'Ca', 'ca', 20, '020', 'alkaline-metal');
+$Sc = array('Scandium', 'scandium', 'Sc', 'sc', 21, '021', 'transition-metal');
+$Ti = array('Titanium', 'titanium', 'Ti', 'ti', 22, '022', 'transition-metal');
+$V = array('Vanadium', 'vanadium', 'V', 'v', 23, '023', 'transition-metal');
+$Cr = array('Chromium', 'chromium', 'Cr', 'cr', 24, '024', 'transition-metal');
+$Mn = array('Manganese', 'manganese', 'Mn', 'mn', 25, '025', 'transition-metal');
+$Fe = array('Iron', 'iron', 'Fe', 'fe', 26, '026', 'transition-metal');
+$Co = array('Cobalt', 'cobalt', 'Co', 'co', 27, '027', 'transition-metal');
+$Ni = array('Nickel', 'nickel', 'Ni', 'ni', 28, '028', 'transition-metal');
+$Cu = array('Copper', 'copper', 'Cu', 'cu', 29, '029', 'transition-metal');
+$Zn = array('Zinc', 'zinc', 'Zn', 'zn', 30, '030', 'transition-metal');
+$Ga = array('Gallium', 'gallium', 'Ga', 'ga', 31, '031', 'metal');
+$Ge = array('Germanium', 'germanium', 'Ge', 'ge', 32, '032', 'metallod');
+$As = array('Arsenic', 'arsenic', 'As', 'as', 33, '033', 'metalloid');
+$Se = array('Selenium', 'selenium', 'Se', 'se', 34, '034', 'nonmetal');
+$Br = array('Bromine', 'bromine', 'Br', 'br', 35, '035', 'halogen');
+$Kr = array('Krypton', 'krypton', 'Kr', 'kr', 36, '036', 'noble-gas');
+$Rb = array('Rubidium', 'rubidium', 'Rb', 'rb', 37, '037', 'alkali-metal');
+$Sr = array('Strontium', 'strontium', 'Sr', 'sr', 38, '038', 'alkaline-metal');
+$Y = array('Yttrium', 'yttrium', 'Y', 'y', 39, '039', 'transition-metal');
+$Zr = array('Zirconium', 'zirconium', 'Zr', 'zr', 40, '040', 'transition-metal');
+$Nb = array('Niobium', 'niobium', 'Nb', 'nb', 41, '041', 'transition-metal');
+$Mo = array('Molybdenum', 'molybdenum', 'Mo', 'mo', 42, '042', 'transition-metal');
+$Tc = array('Technetium', 'technetium', 'Tc', 'tc', 43, '043', 'transition-metal');
+$Ru = array('Ruthenium', 'ruthenium', 'Ru', 'ru', 44, '044', 'transition-metal');
+$Rh = array('Rhodium', 'rhodium', 'Ru', 'ru', 45, '045', 'transition-metal');
+$Pd = array('Palladium', 'palladium', 'Pd', 'pd', 46, '046', 'transition-metal');
+$Ag = array('Silver', 'silver', 'Ag', 'ag', 47, '047', 'transition-metal');
+$Cd = array('Cadmium', 'cadmium', 'Cd', 'cd', 48, '048', 'transition-metal');
+$In = array('Indium', 'indium', 'In', 'in', 49, '049', 'metal');
+$Sn = array('Tin', 'tin', 'Sn', 'sn', 50, '050', 'metal');
+$Sb = array('Antimony', 'antimony', 'Sb', 'sb', 51, '051', 'metalloid');
+$Te = array('Tellurium', 'tellurium', 'Te', 'te', 52, '052', 'metalloid');
+$I = array('Iodine', 'iodine', 'I', 'i', 53, '053', 'halogen');
+$Xe = array('Xenon', 'xenon', 'Xe', 'xe', 54, '054', 'noble-gas');
 
 function generate_table_func( $atts ) {
 	$a = shortcode_atts(array(
@@ -67,7 +85,7 @@ function generate_table_func( $atts ) {
 	$num = $a['num'];
 	$table = '<table class="periodic-table">
 		<tr>
-		<td class="element nonmetal">'.get_element_link('H', 1, $url, $num).'</td>
+		'.get_element_table_slot('H', $url, $num).'
 		<td></td>
 		<td></td>
 		<td></td>
@@ -84,11 +102,11 @@ function generate_table_func( $atts ) {
 		<td></td>
 		<td></td>
 		<td></td>
-		<td class="element noble-gas">'.get_element_link('He', 2, $url, $num).'</td>
+		'.get_element_table_slot('He', $url, $num).'
 		</tr>
 		<tr>
-		<td class="element alkali-metal">'.get_element_link('Li', 3, $url, $num).'</td>
-		<td class="element alkaline-metal">'.get_element_link('Be', 4, $url, $num).'</td>
+		'.get_element_table_slot('Li', $url, $num).'
+		'.get_element_table_slot('Be', $url, $num).'
 		<td></td>
 		<td></td>
 		<td></td>
@@ -99,16 +117,16 @@ function generate_table_func( $atts ) {
 		<td></td>
 		<td></td>
 		<td></td>
-		<td class="element metalloid">'.get_element_link('B', 5, $url, $num).'</td>
-		<td class="element nonmetal">'.get_element_link('C', 6, $url, $num).'</td>
-		<td class="element nonmetal">'.get_element_link('N', 7, $url, $num).'</td>
-		<td class="element nonmetal">'.get_element_link('O', 8, $url, $num).'</td>
-		<td class="element halogen">'.get_element_link('F', 9, $url, $num).'</td>
-		<td class="element noble-gas">'.get_element_link('Ne', 10, $url, $num).'</td>
+		'.get_element_table_slot('B', $url, $num).'
+		'.get_element_table_slot('C', $url, $num).'
+		'.get_element_table_slot('N', $url, $num).'
+		'.get_element_table_slot('O', $url, $num).'
+		'.get_element_table_slot('F', $url, $num).'
+		'.get_element_table_slot('Ne', $url, $num).'
 		</tr>
 		<tr>
-		<td class="element alkali-metal">'.get_element_link('Na', 11, $url, $num).'</td>
-		<td class="element alkaline-metal">'.get_element_link('Mg', 12, $url, $num).'</td>
+		'.get_element_table_slot('Na', $url, $num).'
+		'.get_element_table_slot('Mg', $url, $num).'
 		<td></td>
 		<td></td>
 		<td></td>
@@ -119,52 +137,52 @@ function generate_table_func( $atts ) {
 		<td></td>
 		<td></td>
 		<td></td>
-		<td class="element metal">'.get_element_link('Al', 13, $url, $num).'</td>
-		<td class="element metalloid">'.get_element_link('Si', 14, $url, $num).'</td>
-		<td class="element nonmetal">'.get_element_link('P', 15, $url, $num).'</td>
-		<td class="element nonmetal">'.get_element_link('S', 16, $url, $num).'</td>
-		<td class="element halogen">'.get_element_link('Cl', 17, $url, $num).'</td>
-		<td class="element noble-gas">'.get_element_link('Ar', 18, $url, $num).'</td>
+		'.get_element_table_slot('Al', $url, $num).'
+		'.get_element_table_slot('Si', $url, $num).'
+		'.get_element_table_slot('P', $url, $num).'
+		'.get_element_table_slot('S', $url, $num).'
+		'.get_element_table_slot('Cl', $url, $num).'
+		'.get_element_table_slot('Ar', $url, $num).'
 		</tr>
 		<tr>
-		<td class="element alkali-metal">'.get_element_link('K', 19, $url, $num).'</td>
-		<td class="element alkaline-metal">'.get_element_link('Ca', 20, $url, $num).'</td>
-		<td class="element transition-metal">'.get_element_link('Sc', 21, $url, $num).'</td>
-		<td class="element transition-metal">'.get_element_link('Ti', 22, $url, $num).'</td>
-		<td class="element transition-metal">'.get_element_link('V', 23, $url, $num).'</td>
-		<td class="element transition-metal">'.get_element_link('Cr', 24, $url, $num).'</td>
-		<td class="element transition-metal">'.get_element_link('Mn', 25, $url, $num).'</td>
-		<td class="element transition-metal">'.get_element_link('Fe', 26, $url, $num).'</td>
-		<td class="element transition-metal">'.get_element_link('Co', 27, $url, $num).'</td>
-		<td class="element transition-metal">'.get_element_link('Ni', 28, $url, $num).'</td>
-		<td class="element transition-metal">'.get_element_link('Cu', 29, $url, $num).'</td>
-		<td class="element transition-metal">'.get_element_link('Zn', 30, $url, $num).'</td>
-		<td class="element metal">'.get_element_link('Ga', 31, $url, $num).'</td>
-		<td class="element metalloid">'.get_element_link('Ge', 32, $url, $num).'</td>
-		<td class="element metalloid">'.get_element_link('As', 33, $url, $num).'</td>
-		<td class="element nonmetal">'.get_element_link('Se', 34, $url, $num).'</td>
-		<td class="element halogen">'.get_element_link('Br', 35, $url, $num).'</td>
-		<td class="element noble-gas">'.get_element_link('Kr', 36, $url, $num).'</td>
+		'.get_element_table_slot('K', $url, $num).'
+		'.get_element_table_slot('Ca', $url, $num).'
+		'.get_element_table_slot('Sc', $url, $num).'
+		'.get_element_table_slot('Ti', $url, $num).'
+		'.get_element_table_slot('V', $url, $num).'
+		'.get_element_table_slot('Cr', $url, $num).'
+		'.get_element_table_slot('Mn', $url, $num).'
+		'.get_element_table_slot('Fe', $url, $num).'
+		'.get_element_table_slot('Co', $url, $num).'
+		'.get_element_table_slot('Ni', $url, $num).'
+		'.get_element_table_slot('Cu', $url, $num).'
+		'.get_element_table_slot('Zn', $url, $num).'
+		'.get_element_table_slot('Ga', $url, $num).'
+		'.get_element_table_slot('Ge', $url, $num).'
+		'.get_element_table_slot('As', $url, $num).'
+		'.get_element_table_slot('Se', $url, $num).'
+		'.get_element_table_slot('Br', $url, $num).'
+		'.get_element_table_slot('Kr', $url, $num).'
 		</tr>
 		<tr>
-		<td class="element alkali-metal">Rb</td>
-		<td class="element alkaline-metal">Sr</td>
-		<td class="element transition-metal">Y</td>
-		<td class="element transition-metal">Zr</td>
-		<td class="element transition-metal">Nb</td>
-		<td class="element transition-metal">Mo</td>
-		<td class="element transition-metal">Tc</td>
-		<td class="element transition-metal">Ru</td>
-		<td class="element transition-metal">Rh</td>
-		<td class="element transition-metal">Pd</td>
-		<td class="element transition-metal">Ag</td>
-		<td class="element transition-metal">Cd</td>
-		<td class="element metal">In</td>
-		<td class="element metal">Sn</td>
-		<td class="element metalloid">Sb</td>
-		<td class="element metalloid">Te</td>
-		<td class="element halogen">I</td>
-		<td class="element noble-gas">Xe</td>
+		'.get_element_table_slot('Rb', $url, $num).'
+		'.get_element_table_slot('Sr', $url, $num).'
+		'.get_element_table_slot('Y', $url, $num).'
+		'.get_element_table_slot('Zr', $url, $num).'
+		'.get_element_table_slot('Nb', $url, $num).'
+		'.get_element_table_slot('Mo', $url, $num).'
+		'.get_element_table_slot('Tc', $url, $num).'
+		'.get_element_table_slot('Ru', $url, $num).'
+		'.get_element_table_slot('Rh', $url, $num).'
+		'.get_element_table_slot('Pd', $url, $num).'
+		'.get_element_table_slot('Ag', $url, $num).'
+		'.get_element_table_slot('Cd', $url, $num).'
+		'.get_element_table_slot('In', $url, $num).'
+		'.get_element_table_slot('Sn', $url, $num).'
+		'.get_element_table_slot('Sb', $url, $num).'
+		'.get_element_table_slot('Te', $url, $num).'
+		'.get_element_table_slot('I', $url, $num).'
+		'.get_element_table_slot('Xe', $url, $num).'
 		</tr>
 		<tr>
 		<td class="element alkali-metal">Cs</td>
@@ -270,12 +288,13 @@ function generate_table_func( $atts ) {
 	return $table;
 }
 
-function get_element_link($element, $atomic_num, $url, $num) {
-	if($num >= $atomic_num) {
-		$link = str_replace( $GLOBALS['search'], $GLOBALS[$element], $url );
-		return '<a href="'.$link.'">'.$element.'</a>';
+function get_element_table_slot($element, $url, $num) {
+	$el_ar = $GLOBALS[$element];
+	if($num >= $el_ar[4]) {
+		$link = str_replace( $GLOBALS['search'], $el_ar, $url );
+		return '<td class="element '.$el_ar[6].'" id="'.$el_ar[3].'"><a href="'.$link.'"><abbr title="'.$el_ar[0].'">'.$el_ar[2].'</abbr></a></td>';
 	} else {
-		return $element;
+		return '<td class="element '.$el_ar[6].'" id="'.$el_ar[3].'"><abbr title="'.$el_ar[0].'">'.$el_ar[2].'</abbr></td>';
 	}
 }
 
