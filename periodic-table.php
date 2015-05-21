@@ -76,7 +76,7 @@ $Te = array('Tellurium', 'tellurium', 'Te', 'te', 52, '052', 'metalloid');
 $I = array('Iodine', 'iodine', 'I', 'i', 53, '053', 'halogen');
 $Xe = array('Xenon', 'xenon', 'Xe', 'xe', 54, '054', 'noble-gas');
 
-function generate_table_func( $atts ) {
+function pt_generate_table_func( $atts ) {
 	$a = shortcode_atts(array(
 		'url' => 'http://renkin42.net/project-updates/other/elements/%0number%-%namelower%/',
 		'num' => 118
@@ -85,7 +85,7 @@ function generate_table_func( $atts ) {
 	$num = $a['num'];
 	$table = '<table class="periodic-table">
 		<tr>
-		'.get_element_table_slot('H', $url, $num).'
+		'.pt_get_element_table_slot('H', $url, $num).'
 		<td></td>
 		<td></td>
 		<td></td>
@@ -102,11 +102,11 @@ function generate_table_func( $atts ) {
 		<td></td>
 		<td></td>
 		<td></td>
-		'.get_element_table_slot('He', $url, $num).'
+		'.pt_get_element_table_slot('He', $url, $num).'
 		</tr>
 		<tr>
-		'.get_element_table_slot('Li', $url, $num).'
-		'.get_element_table_slot('Be', $url, $num).'
+		'.pt_get_element_table_slot('Li', $url, $num).'
+		'.pt_get_element_table_slot('Be', $url, $num).'
 		<td></td>
 		<td></td>
 		<td></td>
@@ -117,16 +117,16 @@ function generate_table_func( $atts ) {
 		<td></td>
 		<td></td>
 		<td></td>
-		'.get_element_table_slot('B', $url, $num).'
-		'.get_element_table_slot('C', $url, $num).'
-		'.get_element_table_slot('N', $url, $num).'
-		'.get_element_table_slot('O', $url, $num).'
-		'.get_element_table_slot('F', $url, $num).'
-		'.get_element_table_slot('Ne', $url, $num).'
+		'.pt_get_element_table_slot('B', $url, $num).'
+		'.pt_get_element_table_slot('C', $url, $num).'
+		'.pt_get_element_table_slot('N', $url, $num).'
+		'.pt_get_element_table_slot('O', $url, $num).'
+		'.pt_get_element_table_slot('F', $url, $num).'
+		'.pt_get_element_table_slot('Ne', $url, $num).'
 		</tr>
 		<tr>
-		'.get_element_table_slot('Na', $url, $num).'
-		'.get_element_table_slot('Mg', $url, $num).'
+		'.pt_get_element_table_slot('Na', $url, $num).'
+		'.pt_get_element_table_slot('Mg', $url, $num).'
 		<td></td>
 		<td></td>
 		<td></td>
@@ -137,52 +137,52 @@ function generate_table_func( $atts ) {
 		<td></td>
 		<td></td>
 		<td></td>
-		'.get_element_table_slot('Al', $url, $num).'
-		'.get_element_table_slot('Si', $url, $num).'
-		'.get_element_table_slot('P', $url, $num).'
-		'.get_element_table_slot('S', $url, $num).'
-		'.get_element_table_slot('Cl', $url, $num).'
-		'.get_element_table_slot('Ar', $url, $num).'
+		'.pt_get_element_table_slot('Al', $url, $num).'
+		'.pt_get_element_table_slot('Si', $url, $num).'
+		'.pt_get_element_table_slot('P', $url, $num).'
+		'.pt_get_element_table_slot('S', $url, $num).'
+		'.pt_get_element_table_slot('Cl', $url, $num).'
+		'.pt_get_element_table_slot('Ar', $url, $num).'
 		</tr>
 		<tr>
-		'.get_element_table_slot('K', $url, $num).'
-		'.get_element_table_slot('Ca', $url, $num).'
-		'.get_element_table_slot('Sc', $url, $num).'
-		'.get_element_table_slot('Ti', $url, $num).'
-		'.get_element_table_slot('V', $url, $num).'
-		'.get_element_table_slot('Cr', $url, $num).'
-		'.get_element_table_slot('Mn', $url, $num).'
-		'.get_element_table_slot('Fe', $url, $num).'
-		'.get_element_table_slot('Co', $url, $num).'
-		'.get_element_table_slot('Ni', $url, $num).'
-		'.get_element_table_slot('Cu', $url, $num).'
-		'.get_element_table_slot('Zn', $url, $num).'
-		'.get_element_table_slot('Ga', $url, $num).'
-		'.get_element_table_slot('Ge', $url, $num).'
-		'.get_element_table_slot('As', $url, $num).'
-		'.get_element_table_slot('Se', $url, $num).'
-		'.get_element_table_slot('Br', $url, $num).'
-		'.get_element_table_slot('Kr', $url, $num).'
+		'.pt_get_element_table_slot('K', $url, $num).'
+		'.pt_get_element_table_slot('Ca', $url, $num).'
+		'.pt_get_element_table_slot('Sc', $url, $num).'
+		'.pt_get_element_table_slot('Ti', $url, $num).'
+		'.pt_get_element_table_slot('V', $url, $num).'
+		'.pt_get_element_table_slot('Cr', $url, $num).'
+		'.pt_get_element_table_slot('Mn', $url, $num).'
+		'.pt_get_element_table_slot('Fe', $url, $num).'
+		'.pt_get_element_table_slot('Co', $url, $num).'
+		'.pt_get_element_table_slot('Ni', $url, $num).'
+		'.pt_get_element_table_slot('Cu', $url, $num).'
+		'.pt_get_element_table_slot('Zn', $url, $num).'
+		'.pt_get_element_table_slot('Ga', $url, $num).'
+		'.pt_get_element_table_slot('Ge', $url, $num).'
+		'.pt_get_element_table_slot('As', $url, $num).'
+		'.pt_get_element_table_slot('Se', $url, $num).'
+		'.pt_get_element_table_slot('Br', $url, $num).'
+		'.pt_get_element_table_slot('Kr', $url, $num).'
 		</tr>
 		<tr>
-		'.get_element_table_slot('Rb', $url, $num).'
-		'.get_element_table_slot('Sr', $url, $num).'
-		'.get_element_table_slot('Y', $url, $num).'
-		'.get_element_table_slot('Zr', $url, $num).'
-		'.get_element_table_slot('Nb', $url, $num).'
-		'.get_element_table_slot('Mo', $url, $num).'
-		'.get_element_table_slot('Tc', $url, $num).'
-		'.get_element_table_slot('Ru', $url, $num).'
-		'.get_element_table_slot('Rh', $url, $num).'
-		'.get_element_table_slot('Pd', $url, $num).'
-		'.get_element_table_slot('Ag', $url, $num).'
-		'.get_element_table_slot('Cd', $url, $num).'
-		'.get_element_table_slot('In', $url, $num).'
-		'.get_element_table_slot('Sn', $url, $num).'
-		'.get_element_table_slot('Sb', $url, $num).'
-		'.get_element_table_slot('Te', $url, $num).'
-		'.get_element_table_slot('I', $url, $num).'
-		'.get_element_table_slot('Xe', $url, $num).'
+		'.pt_get_element_table_slot('Rb', $url, $num).'
+		'.pt_get_element_table_slot('Sr', $url, $num).'
+		'.pt_get_element_table_slot('Y', $url, $num).'
+		'.pt_get_element_table_slot('Zr', $url, $num).'
+		'.pt_get_element_table_slot('Nb', $url, $num).'
+		'.pt_get_element_table_slot('Mo', $url, $num).'
+		'.pt_get_element_table_slot('Tc', $url, $num).'
+		'.pt_get_element_table_slot('Ru', $url, $num).'
+		'.pt_get_element_table_slot('Rh', $url, $num).'
+		'.pt_get_element_table_slot('Pd', $url, $num).'
+		'.pt_get_element_table_slot('Ag', $url, $num).'
+		'.pt_get_element_table_slot('Cd', $url, $num).'
+		'.pt_get_element_table_slot('In', $url, $num).'
+		'.pt_get_element_table_slot('Sn', $url, $num).'
+		'.pt_get_element_table_slot('Sb', $url, $num).'
+		'.pt_get_element_table_slot('Te', $url, $num).'
+		'.pt_get_element_table_slot('I', $url, $num).'
+		'.pt_get_element_table_slot('Xe', $url, $num).'
 		</tr>
 		<tr>
 		<td class="element alkali-metal">Cs</td>
@@ -288,7 +288,7 @@ function generate_table_func( $atts ) {
 	return $table;
 }
 
-function get_element_table_slot($element, $url, $num) {
+function pt_get_element_table_slot($element, $url, $num) {
 	$el_ar = $GLOBALS[$element];
 	if($num >= $el_ar[4]) {
 		$link = str_replace( $GLOBALS['search'], $el_ar, $url );
@@ -298,7 +298,11 @@ function get_element_table_slot($element, $url, $num) {
 	}
 }
 
-wp_enqueue_style('periodic-table', plugins_url('style.css', __FILE__));
-wp_enqueue_script('jquery');
-wp_enqueue_script('periodictable', plugins_url('functions.js', __FILE__), array('jquery'));
-add_shortcode( 'periodic_table', 'generate_table_func' );
+function pt_register_scripts() {
+	wp_enqueue_style('periodic-table', plugins_url('style.css', __FILE__));
+	wp_enqueue_script('jquery');
+	wp_enqueue_script('periodictable', plugins_url('functions.js', __FILE__), array('jquery'));
+}
+
+add_action('wp_enqueue_scripts', 'pt_register_scripts');
+add_shortcode( 'periodic_table', 'pt_generate_table_func' );
