@@ -300,5 +300,5 @@ function get_element_table_slot($element, $url, $num) {
 
 wp_enqueue_style('periodic-table', plugins_url('style.css', __FILE__));
 wp_enqueue_script('jquery');
-wp_enqueue_script('resize-text', plugins_url('resizetext.js', __FILE__), array('jquery'));
+wp_enqueue_script('periodictable', plugins_url('functions.js', __FILE__), array('jquery'));
 add_shortcode( 'periodic_table', 'generate_table_func' );
