@@ -7,6 +7,8 @@
   Version: 1.0.0
   Author: Renkin42
   Author URI:
+  Text Domain: periodic-table
+  Domain Path: /lang/
   License: MPL 2.0
 
   Copyright (C) 2015 Austin Leydecker
@@ -18,17 +20,29 @@
 
 $search = array('%nameupper%', '%namelower%', '%symbolupper%', '%symbollower%', '%number%', '%0number%' , '%group%');
 
+/* Element Groups */
+$group_nm = 'nonmetal';
+$group_ng = 'noble-gas';
+$group_am = 'alkali-metal';
+$group_ae = 'alkaline-earth';
+$group_md = 'metalloid';
+$group_mt = 'metal';
+$group_hg = 'halogen';
+$group_tm = 'transition-metal';
+$group_la = 'lanthanide';
+$group_ac = 'actinide';
+
 /* Elements */
-$H = array('Hydrogen', 'hydrogen', 'H', 'h', 1, '001', 'nonmetal');
-$He = array('Helium', 'helium', 'He', 'he', 2, '002', 'noble-gas');
-$Li = array('Lithium', 'lithium', 'Li', 'li', 3, '003', 'alkali-metal');
-$Be = array('Beryllium', 'beryllium', 'Be', 'be', 4, '004', 'alkaline-metal');
-$B = array('Boron', 'boron', 'B', 'b', 5, '005', 'metalloid');
-$C = array('Carbon', 'carbon', 'C', 'c', 6, '006', 'nonmetal');
-$N = array('Nitrogen', 'nitrogen', 'N', 'n', 7, '007', 'nonmetal');
-$O = array('Oxygen', 'oxygen', 'O', 'o', 8, '008', 'nonmetal');
-$F = array('Fluorine', 'fluorine', 'F', 'f', 9, '009', 'halogen');
-$Ne = array('Neon', 'neon', 'Ne', 'ne', 10, '010', 'noble-gas');
+$H = array(__('Hydrogen', 'periodic-table'), _l('Hydrogen', 'periodic-table'), 'H', 'h', 1, '001', $group_nm);
+$He = array(__('Helium', 'periodic-table'), _l('Helium', 'periodic-table'), 'He', 'he', 2, '002', $group_ng);
+$Li = array(__('Lithium', 'periodic-table'), _l('Lithium', 'periodic-table'), 'Li', 'li', 3, '003', $group_am);
+$Be = array(__('Beryllium', 'periodic-table'), _l('Beryllium', 'periodic-table'), 'Be', 'be', 4, '004', $group_ae);
+$B = array(__('Boron', 'periodic-table'), _l('Boron', 'periodic-table'), 'B', 'b', 5, '005', $group_md);
+$C = array(__('Carbon', 'periodic-table'), _l('Carbon', 'periodic-table'), 'C', 'c', 6, '006', $group_nm);
+$N = array(__('Nitrogen', 'periodic-table)'), _l('Nitrogen', 'periodic-table)'), 'N', 'n', 7, '007', $group_nm);
+$O = array(__('Oxygen', 'periodic-table'), _l('Oxygen', 'periodic-table'), 'O', 'o', 8, '008', $group_nm);
+$F = array(__('Fluorine', 'periodic-table'), _l('Fluorine', 'periodic-table'), 'F', 'f', 9, '009', $group_hg);
+$Ne = array(__('Neon', 'periodic-table'), _l('Neon', 'periodic-table'), 'Ne', 'ne', 10, '010', $group_ng);
 $Na = array('Sodium', 'sodium', 'Na', 'na', 11, '011', 'alkali-metal');
 $Mg = array('Magnesium', 'magnesium', 'Mg', 'mg', 12, '012', 'alkaline-metal');
 $Al = array('Aluminum', 'aluminum', 'Al', 'al', 13, '013', 'metal');
@@ -301,6 +315,10 @@ function pt_register_scripts() {
 	wp_enqueue_style('periodic-table', plugins_url('style.css', __FILE__));
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('periodictable', plugins_url('functions.js', __FILE__), array('jquery'));
+}
+
+function _l($string, $domain) {
+	return strtolower(__($string, $domain));
 }
 
 add_action('wp_enqueue_scripts', 'pt_register_scripts');
