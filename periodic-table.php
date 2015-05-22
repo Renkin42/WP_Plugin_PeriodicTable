@@ -288,11 +288,12 @@ function pt_generate_table_func( $atts ) {
 
 function pt_get_element_table_slot($element, $url, $num) {
 	$el_ar = $GLOBALS[$element];
+	$el_sym = str_replace(" ", "&nbsp;", str_pad($el_ar[2], 3));
 	if($num >= $el_ar[4]) {
 		$link = str_replace( $GLOBALS['search'], $el_ar, $url );
-		return '<td class="element '.$el_ar[6].'" id="'.$el_ar[3].'"><a href="'.$link.'"><abbr title="'.$el_ar[0].'">'.$el_ar[2].'</abbr></a></td>';
+		return '<td class="element '.$el_ar[6].'" id="'.$el_ar[3].'"><a href="'.$link.'"><abbr title="'.$el_ar[0].'">'.$el_sym.'</abbr></a></td>';
 	} else {
-		return '<td class="element '.$el_ar[6].'" id="'.$el_ar[3].'"><abbr title="'.$el_ar[0].'">'.$el_ar[2].'</abbr></td>';
+		return '<td class="element '.$el_ar[6].'" id="'.$el_ar[3].'"><abbr title="'.$el_ar[0].'">'.$el_sym.'</abbr></td>';
 	}
 }
 

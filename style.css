@@ -6,6 +6,7 @@
 .periodic-table {
     table-layout: auto;
     border-collapse: collapse;
+    font-family: monospace;
 }
 .periodic-table td {
     border: none;
