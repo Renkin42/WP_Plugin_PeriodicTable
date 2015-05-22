@@ -17,3 +17,57 @@
     border: 1px solid black;
 }
 
+.periodic-table .nonmetal {
+    background-color: #78bf7a;
+    background-color: rgba(120,191,122,0.7);
+}
+
+.periodic-table .noble-gas {
+    background-color: #bdbf78;
+    background-color: rgba(189,191,120,0.7);
+}
+
+.periodic-table .halogen {
+    background-color: #9fbf78;
+    background-color: rgba(159,191,120,0.7);
+}
+
+.periodic-table .metalloid {
+    background-color: #78bf9b;
+    background-color: rgba(120,191,155,0.7);
+}
+
+.periodic-table .metal {
+    background-color: #78bcbf;
+    background-color: rgba(120,188,191,0.7);
+}
+
+.periodic-table .transition-metal {
+    background-color: #7882bf;
+    background-color: rgba(120,130,191,0.7);
+}
+
+.periodic-table .alkaline-metal {
+    background-color: #bf9c78;
+    background-color: rgba(191,156,120,0.7);
+}
+
+.periodic-table .alkali-metal {
+    background-color: #bf7878;
+    background-color: rgba(191,120,120,0.7);
+}
+
+.periodic-table .lanthanide {
+    background-color: #bf78b5;
+    background-color: rgba(191,120,181,0.7);
+}
+
+.periodic-table .actinide {
+    background-color: #a578bf;
+    background-color: rgba(165,120,191,0.7);
+}
+
+.periodic-table .unknown {
+    background-color: #b0b0b0;
+    background-color: rgba(176,176,176,0.7);
+}
